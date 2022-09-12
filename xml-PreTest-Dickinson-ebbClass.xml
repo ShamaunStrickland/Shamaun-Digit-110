@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 2022-09-09 ebb: Starting this off: we're missing a root element! I am adding a root element named <TEI> according to the convention of this code.-->
+<root><!-- 2022-09-09 ebb: Starting this off: we're missing a root element! I am adding a root element named <TEI> according to the convention of this code.-->
 <TEI>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Poem 6 (J 281: 1861/1935)</Title><!-- ebb: End tag doesn't match start tag. -->
+                <title>Poem 6 (J 281: 1861/1935)</title><!-- ebb: End tag doesn't match start tag. -->
                 <author>Emily Dickinson</author>
             </titleStmt>
             <publicationStmt>
-                <p>Fascicle 16: Dickinson's variants and published versions<p>
+                <p>Fascicle 16: Dickinson's variants and published versions</p> <!-- Missimg end tag -->
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
@@ -18,7 +18,7 @@
                     </msIdentifier>
                 </msDesc>
                 <bibl>
-                    <ref target="http://www.cs.virginia.edu/~ajf2j/emily/">
+                    <ref> target="http://www.cs.virginia.edu/~ajf2j/emily/"</ref> <!-- No end tag missing ending  -->
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -27,32 +27,32 @@
         <front>
             <div type="references">
                 <listRef>
-                    <ptr target="xml/1606variant.xml"/>
-                    <ptr target="img/1606/fs1606a.jpg"/>
-                    <ptr target "img/1606/fs1606b.jpg"/>
-                    <ptr target="img/1606/1606fha.jpg"/>
-                    <ptr target="img/1606/1606fhb.jpg"/>
-                    <ptr target="img/1606/1606fhMap.jpg"/>
-                    <ptr target="img/1606/fs1606Map.jpg">
-                </ListRef>
+                    <ptr> target="xml/1606variant.xml"</ptr>
+                    <ptr> target="img/1606/fs1606a.jpg"</ptr>
+                    <ptr> target "img/1606/fs1606b.jpg"</ptr>
+                    <ptr> target="img/1606/1606fha.jpg"</ptr>
+                    <ptr> target="img/1606/1606fhb.jpg"</ptr>
+                    <ptr> target="img/1606/1606fhMap.jpg"</ptr>
+                    <ptr> target="img/1606/fs1606Map.jpg"</ptr><!-- Missing end and begging tags -->
+                </listRef><!-- Tag didnt match starting tag -->
             </div>
             <div type="witness">
                 <listWit>
                     <witness xml:id="df16">
                         <bibl>
-                            <title>ORIGINAL POEMS<author></title>Emily Dickinson</author>
+                            <title>ORIGINAL POEMS</title><author>Emily Dickinson</author><!-- Start tag was befor another Tag  -->
                         </bibl>
                     </witness>
-                    <witness xml:id="fh>
+                    <witness xml:id="fh"> <!-- Missing equote -->
                         <bibl>
                             <title>Final Harvest: Emily Dickinson's Poems</title>
                             <author>Emily Dickinson</author>
                             <editor>Thomas H. Johnson</editor>
-                            <pub Place>Boston</pub Place>
-                            <publisher>Little, Brown & Company</publisher>
+                            <pub> <place>Boston</place> </pub></bibl><!-- No closing tags and tags rearranged correctly -->
+                            <publisher>Little, Brown &amp; Company</publisher><!-- amp added -->
                             <date>1961</date>
                         
-                    </witness>
+                    </witness></listWit><!-- end tag added -->
             </div>
         </front>
         <body>
@@ -105,7 +105,7 @@
                     </app>
                     and Cold—
                 </l>
-                <l n=10">But that will hold—</l>
+                <l n="10">But that will hold—</l><!-- missing end quote -->
                 <l n="11">If any are not sure—</l>
                 <l n="12">We show them—prayer—</l>
                 <l n="13">But we, who know,</l>
@@ -115,16 +115,16 @@
                 <l n="15">Looking at Death, is Dying—</l>
                 <l n="16">Just let go the Breath—</l>
                 <l n="17">And not the pillow at your Cheek</l>
-                <l n="18">So Slumbereth—<l>
+                <l n="18">So Slumbereth—</l><!-- missing end quote element -->
             </lg>
             <lg>
                 <l n="19">Others, Can wrestle—</l>
-                <l n="20">Yours, is done—
-                <l n="21">
+                <l n="20">Yours, is done—</l><!-- missing end tag -->
+                <l n="21"></l>
                     And so of
                     <app>
-                        <rdg wit="#df16">Wo</rdg>
-                        <rdg wit="#fh">Woe<rdg>
+                        <rdg> wit="#df16">Wo</rdg><!-- missing starting quote elemnt and end tag element -->
+                        <rdg> wit="#fh">Woe</rdg>
                     </app>
                     , bleak dreaded—
                     <app>
@@ -132,11 +132,12 @@
                         <rdg wit="#fh">come</rdg>
                     </app>
                     ,
-                </l>
+                </lg><!-- Starting tag added -->
+            <lg>
                 <l n="22">It sets the Fright at liberty—</l>
                 <l n="23">And Terror's free—</l>
                 <l n="24">Gay, Ghastly, Holiday!</l>
             </lg>
         </body>
     </text>
-</TEI>
+</TEI> </root> <!-- No root element -->
